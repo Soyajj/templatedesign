@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding : 0;
+    box-sizing: border-box;
+    font-weight: lighter;
+  }
+  
+  .navbar {
+    height: 100%;
+    position: fixed;
+    display: flex;
+    color: black;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .navbar ul{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .navbar ul li{
+    list-style-type: none;
+    padding:15px;
+    color:black
+  }
+  
+  .logo{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh;
+    color: black;
+  }
+  
+  .banner {
+    min-height: 100vh;
+    overflow: auto;
+    background : white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .bannerText{
+    margin-top:5vh;
+    color: black;
+    border: 1px;
+    border-width: 1px;
+    border-style: solid;
+    padding:60px;
+    box-shadow: 10px 15px 18px 0px rgba(0,0,0,0.2);
+    /* background: linear-gradient(to bottom right,rgb(118,176,255 ),white); */
+  }
+  
+  .bannerText h1,h2,h4{
+    font-weight: lighter;
+    padding: 5px;
+    letter-spacing: 5px;
+  }
+  
+  .profile {
+    min-height: 100vh;
+    overflow: auto;
+    background: white;
+  }
+  
+  .contact{
+    min-height: 100vh;
+    overflow: auto;
+    background: white;
+  }
+  
+  .links{
+    text-decoration: none;
+  }
+  
+  li:hover{
+    color: black;
+    border-right: 2px solid black;
+    transition: 0.2s all;
+  }
+  .socials{
+    margin-top : 5vh;
+  
+  }
+  
+  .socials i{
+    color : black;
+    padding : 20px;
+    font-size : 2ch;
+    border:1px solid black;
+    border-radius: 2rem;
+    margin: 10px;
+  }
+  
+  .socials i:hover{
+    transform: scale(1.1,1.1);
+    transition: 0.3s all;
+  }
+  
+  
+  @media only screen and (max-width:1000px){
+      .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        height: 10vh;
+        width: 100%;
+      }
+  
+      .navbar ul{
+        display: flex;
+        flex-direction: row;
+      }
+  
+      .logo{
+        justify-content: flex-start;
+      }
+  
+      li:hover{
+        color: black;
+        border-right : 0px;
+        border-bottom: 2px solid black;
+        transition: 0.2s all;
+      }
+  
+  }
