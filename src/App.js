@@ -12,9 +12,9 @@ function App() {
   return (
     <Router>
       <div className={darkMode ? 'body-dark' : 'body-light'}>
-      <i className={darkMode ? 'fa fa-toggle-on' : 'fa fa-toggle-off'}
-       onClick = {()=>setDarkMode(prevMode => !prevMode)}
-       id = "toggleBtn"> {darkMode ? 'Dark Mode' : 'Light Mode'} </i>
+        <i className={darkMode ? 'fa fa-toggle-on' : 'fa fa-toggle-off'}
+        onClick = {()=>setDarkMode(prevMode => !prevMode)}
+        id = "toggleBtn"> {darkMode ? 'Dark Mode' : 'Light Mode'} </i>
         <Navbar />
         <Switch>
           <Route exact path="/"  component ={Banner} />

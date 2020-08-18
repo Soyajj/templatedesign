@@ -6,7 +6,7 @@ function Navbar() {
     return (
         <div className = "mainnav">
             <div className = "logo">
-                Logo
+                <h3>Logo</h3>
             </div>
             <div className = "navbar">
                 <ul>
