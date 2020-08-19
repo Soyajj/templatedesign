@@ -15,30 +15,21 @@
   color:white;
 }
 
-.body-dark i,.body-light i{
- font-size: 1rem;
- padding : 10px;
- letter-spacing: 1px;
+i{
  cursor: pointer;
 }
 
 .body-dark .bannerText{
-  box-shadow: 10px 8px 16px 0px rgba(255,255,255,0.1);
+  border : 1px solid white;
+  box-shadow: none;
+  border-radius: 0;
+
 }
 
 .body-dark .navbar ul li{
   color :white;
 }
 
-.body-dark li:hover{
-  color: white;
-  border-right: 2px solid white;
-}
-
-.body-dark .socials i{
-  color:white;
-  border:1px solid white;
-}
 
 .socials #github{
   color:black;
@@ -48,6 +39,12 @@
   color:white;
 }
 
+.body-dark .socials i{
+  color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
 .navbar {
   height: 100%;
   position: fixed;
@@ -55,7 +52,6 @@
   flex-direction: column;
   justify-content: center;
   z-index: 999;
-
 }
 
 .navbar ul{
@@ -67,6 +63,7 @@
   color : black;
   list-style-type: none;
   padding:15px;
+  border-radius: 0.5rem;
 }
 
 .logo{
@@ -77,7 +74,6 @@
   justify-content: center;
   align-items: center;
   padding: 2vh;
-  z-index: 999;
 }
 
 .banner {
@@ -92,11 +88,12 @@
 
 .bannerText{
   margin-top:5vh;
-  border: 1px;
-  border-width: 1px;
+  border: none;
+  border-width: 0;
   border-style: solid;
-  padding:60px;
-  box-shadow: 10px 15px 18px 0px rgba(0,0,0,0.2);
+  padding:50px;
+  border-radius: 1rem;
+  box-shadow: 4px 6px 10px 0px rgba(0,0,0,0.2);
 }
 
 .bannerText h1,h2,h4{
@@ -133,21 +130,26 @@
   justify-content: flex-start;
   align-items: center;
   width: 40%;
-  border: 1px solid black;
+  border-radius:1rem ;
   box-shadow: 5px 8px 16px 0 rgba(0,0,0,0.2);
   height: 80vh;
 
 }
 
 .body-dark .map{
-  border: 1px solid white;
-  box-shadow: 5px 8px 16px 0 rgba(255,255,255,0.1);
+  border-radius: 0;
+  border:1px solid white;
+}
+
+.body-dark .map img{
+  border-radius: 0;
 }
 
 .map img{
   object-fit: contain;
   width: 90%;
   margin-top: 3vh;
+  border-radius: 1rem;
 }
 
 .links{
@@ -155,11 +157,10 @@
 }
 
 li:hover{
-  color:black;
-  border-right: 2px solid black;
   transition: 0.2s all;
-  background-color: teal;
+  box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.2);
 }
+
 .socials{
   margin-top : 5vh;
 }
@@ -167,13 +168,13 @@ li:hover{
 .socials i{
   padding : 20px;
   font-size : 2ch;
-  border:1px solid black;
-  border-radius: 2rem;
+  box-shadow: 5px 5px 12px 0px rgba(0,0,0,0.2);
+  border-radius: 1rem;
   margin: 10px;
 }
 
 .socials i:hover{
-  transform: scale(1.1,1.1);
+  transform: scale(1.2,1.2);
   transition: 0.3s all;
 }
 
@@ -213,7 +214,32 @@ h5{
   border-radius: 50%;
   height: 25vh;
   margin-top: 5vh;
+  box-shadow: 8px 8px 10px 0px rgba(0,0,0,0.4);
+
 }
+
+.li-active{
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 8px 0px rgba(0,0,0,0.2);
+}
+
+.body-dark li:hover{
+  border-radius: 0;
+  background-color: teal;
+  color: black;
+}
+.body-dark .li-active{
+  border-radius: 0;
+  border-right : 2px solid teal;  
+}
+
+#toggleBtn{
+  padding:10px;  
+  margin-top: 5px;
+  border-radius: 0.5rem;
+  box-shadow: 3px 2px 7px 0px rgba(0,0,0,0.2) ;
+}
+
 
 @media only screen and (max-width:1000px){
     .navbar {
@@ -232,20 +258,14 @@ h5{
     .logo{
       justify-content: flex-start;
     }
-
-    li:hover{
-      border-right : none;
-      border-bottom: 2px solid black;
-      transition: 0.2s all;
-    }
-
-    .body-dark li:hover{
-      border-right : none;
-      border-bottom: 2px solid white;
-      transition: 0.2s all;
-    }
     
     .profile {
       margin-top: 10vh;
     }
+
+    .body-dark .li-active{
+      border-right : none;
+      border-bottom : 2px solid teal;  
+    }
+    
 }

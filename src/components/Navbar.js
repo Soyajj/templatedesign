@@ -1,8 +1,15 @@
 import React from 'react';
 import '../App.css';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 function Navbar() {
+    // const [active,setActive] = React.useState(false);
+
+    // let changer = () =>(
+    //     setActive(prev => !prev)
+    // )
+    // className = {active? 'li-active':'none'} onClick = {changer}
+
     return (
         <div className = "mainnav">
             <div className = "logo">
@@ -10,15 +17,15 @@ function Navbar() {
             </div>
             <div className = "navbar">
                 <ul>
-                    <Link style={linkStyle} to = "/" >
-                        <li>Home</li>
-                    </Link>
-                    <Link style={linkStyle} to="/profile">
-                        <li>Profile</li>
-                    </Link>
-                    <Link style={linkStyle} to="/contact">
+                    <NavLink exact={true} activeClassName='li-active' style={linkStyle} to = "/" >
+                        <li >Home</li>
+                    </NavLink>
+                    <NavLink activeClassName='li-active' style={linkStyle} to="/profile">
+                        <li >Profile</li>
+                    </NavLink>
+                    <NavLink activeClassName='li-active' style={linkStyle} to="/contact">
                         <li>Contact</li>
-                    </Link>
+                    </NavLink>
                 </ul>
             </div>
         </div>
