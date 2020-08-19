@@ -20,7 +20,7 @@ function App() {
       >{darkMode ? 'Dark Mode' : 'Light Mode'}</i>
         <Navbar />
         <Switch>
-          <Route exact path={["/" , "/home" , "/templatedesign/"]}  component ={Banner} />
+          <Route exact path={["/" , "/templatedesign"]}  component ={Banner} />
           <Route path="/profile" component={Profile}/>
           <Route path="/contact" component={Contact}/>
         </Switch>
