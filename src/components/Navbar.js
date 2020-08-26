@@ -3,13 +3,6 @@ import '../App.css';
 import {NavLink} from 'react-router-dom';
 
 function Navbar() {
-    // const [active,setActive] = React.useState(false);
-
-    // let changer = () =>(
-    //     setActive(prev => !prev)
-    // )
-    // className = {active? 'li-active':'none'} onClick = {changer}
-
     return (
         <div className = "mainnav">
             <div className = "logo">
